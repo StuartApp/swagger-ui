@@ -77,6 +77,44 @@
         showRequestHeaders: false
       });
 
+<<<<<<< a67722e87095847b4d4b91eb40a01ed7d63a500e
+||||||| merged common ancestors
+      function addApiKeyAuthorization(){
+        var key = encodeURIComponent($('#input_apiKey')[0].value);
+        if(key && key.trim() != "") {
+            var apiKeyAuth = new SwaggerClient.ApiKeyAuthorization("api_key", key, "query");
+            window.swaggerUi.api.clientAuthorizations.add("api_key", apiKeyAuth);
+            log("added key " + key);
+        }
+      }
+
+      $('#input_apiKey').change(addApiKeyAuthorization);
+
+      // if you have an apiKey you would like to pre-populate on the page for demonstration purposes...
+      /*
+        var apiKey = "myApiKeyXXXX123456789";
+        $('#input_apiKey').val(apiKey);
+      */
+
+=======
+      function addApiKeyAuthorization(){
+        var key = encodeURIComponent($('#input_apiKey')[0].value);
+        if(key && key.trim() != "") {
+            var apiKeyAuth = new SwaggerClient.ApiKeyAuthorization("access_token", key, "query");
+            window.swaggerUi.api.clientAuthorizations.add("access_token", apiKeyAuth);
+            log("added key " + key);
+        }
+      }
+
+      $('#input_apiKey').change(addApiKeyAuthorization);
+
+      // if you have an apiKey you would like to pre-populate on the page for demonstration purposes...
+      var access_token = window.location.search.match(/access_token=([^&]+)/);
+      if (access_token && access_token.length > 1) {
+        $('#input_apiKey').val(decodeURIComponent(access_token[1]));
+      }
+
+>>>>>>> Customizing Swagger to Stuart
       window.swaggerUi.load();
 
       function log() {

@@ -1,0 +1,109 @@
+/* Custom Swagger Styles for Stuart.com */
+
+@font-face {
+    font-family: 'DINPro';
+    src: url("//stuart.com/fonts/DINPro-Light-62ef45f3.eot");
+    src: url("//stuart.com/fonts/DINPro-Light-62ef45f3.eot?#iefix") format("embedded-opentype"), url("../fonts/DINPro-Light-261ca4cd.woff") format("woff"), url("../fonts/DINPro-Light-ca12b7a4.ttf") format("truetype"), url("../fonts/DINPro-Light-5d1cb85f.svg#62f75ccd04c776030ca293d074e92944") format("svg");
+    font-style: normal;
+    font-weight: 300
+}
+
+@font-face {
+    font-family: 'DINPro';
+    src: url("//stuart.com/fonts/DINPro-4217d647.eot");
+    src: url("//stuart.com/fonts/DINPro-4217d647.eot?#iefix") format("embedded-opentype"), url("../fonts/DINPro-955d6804.woff") format("woff"), url("../fonts/DINPro-d8883cd4.ttf") format("truetype"), url("../fonts/DINPro-48b8dffd.svg#3cb472b1a9451e4fa699bb9276f5d2ad") format("svg");
+    font-style: normal;
+    font-weight: 400
+}
+
+@font-face {
+    font-family: 'DINPro';
+    src: url("//stuart.com/fonts/DINPro-Medium-4fd09dae.eot");
+    src: url("//stuart.com/fonts/DINPro-Medium-4fd09dae.eot?#iefix") format("embedded-opentype"), url("../fonts/DINPro-Medium-2f799e86.woff") format("woff"), url("../fonts/DINPro-Medium-9b0808a2.ttf") format("truetype"), url("../fonts/DINPro-Medium-2219df38.svg#43a856eecb2199e640a1a5bf1dc4a1e7") format("svg");
+    font-style: normal;
+    font-weight: 500
+}
+
+.swagger-section {
+    #header {
+        background:none;
+        #logo {
+            background-image: url("//stuart.com/images/stuart-logomark-481d6268.svg");
+            color: inherit;
+            font-weight: normal;
+        }
+    }
+    #explore, #explore:hover {
+        background-color: #11A3EB;
+        border-radius: 2px;
+    }
+    #explore:active {
+        background-color: #1593D1;
+    }
+    #api_selector input,
+    .swagger-ui-wrap input.parameter {
+        border: none;
+        margin: 0px;
+        border-radius: 0;
+        color: #0A0B0C;
+        padding:5px 10px !important;
+        background-color: transparent;
+        background-color: rgba(0, 0, 0, 0.02);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        font-family: "DINPro", sans-serif;
+    }
+
+    .swagger-ui-wrap {
+        font-family: "DINPro", sans-serif;
+        b, p, strong, .info_title, ul#resources,
+        ul#resources li.resource div.heading h2,
+        .model-signature {
+            font-family: "DINPro", sans-serif;
+        }
+        a {
+            color: #11A3EB;
+            text-decoration: none;
+        }
+        .info_title {
+            font-size: 42px;
+            font-weight: normal;
+        }
+        input.parameter {
+            padding: 4px 6px !important;
+            background: #fff;
+            border-bottom-color: #ddd;
+            font-weight: normal;
+            color: black;
+        }
+        ul#resources li.resource {
+            div.heading h2 {
+                font-weight: normal;
+            }
+            ul.endpoints li.endpoint ul.operations {
+                li.operation.get,
+                li.operation.post,
+                li.operation.delete,
+                li.operation.put {
+                    div.content {
+                        background-color: #fbfbfc;
+                        border: 1px solid #E9EDEF;
+                    }
+                }
+                li.operation div.content div.sandbox_header input.submit {
+                    background-color: #11A3EB;
+                    border-radius: 3px;
+                    border:none;
+                    color: white;
+                    font-weight: bold;
+                    font-size:14px;
+                }
+            } 
+        }
+        .footer * {
+            font-size: 16px;
+            font-weight: normal;
+            font-variant: small-caps;
+        }
+    }
+}
+
